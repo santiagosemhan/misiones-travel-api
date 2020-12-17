@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "circuitos",
+  "info": {
+    "name": "Circuitos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "circuito": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.circuito"
+    },
+    "activo": {
+      "type": "boolean",
+      "default": true
+    },
+    "distancia_total": {
+      "type": "float"
+    },
+    "terreno": {
+      "type": "string"
+    },
+    "dificultad": {
+      "type": "string"
+    }
+  }
+}

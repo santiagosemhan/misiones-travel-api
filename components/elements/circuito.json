@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_circuitos",
+  "info": {
+    "name": "circuito",
+    "icon": "bars",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "distancia": {
+      "type": "decimal"
+    },
+    "tipo_ruta": {
+      "type": "enumeration",
+      "enum": [
+        "asfalto",
+        "tierra",
+        "asfalto_y_tierra"
+      ]
+    },
+    "unidad_distancia": {
+      "type": "enumeration",
+      "enum": [
+        "mts",
+        "kms"
+      ]
+    },
+    "lugar": {
+      "model": "lugar"
+    }
+  }
+}

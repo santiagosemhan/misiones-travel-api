@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/circuitos",
+      "handler": "circuito.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/circuitos/count",
+      "handler": "circuito.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/circuitos/:id",
+      "handler": "circuito.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/circuitos",
+      "handler": "circuito.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/circuitos/:id",
+      "handler": "circuito.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/circuitos/:id",
+      "handler": "circuito.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "localidades",
+  "info": {
+    "name": "localidades",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "latitud": {
+      "type": "float"
+    },
+    "longitud": {
+      "type": "float"
+    }
+  }
+}
