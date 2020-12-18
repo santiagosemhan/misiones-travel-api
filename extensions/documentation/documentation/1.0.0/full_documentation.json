@@ -14,12 +14,17 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/17/2020 5:47:33 PM"
+    "x-generation-date": "12/18/2020 8:54:46 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
     "showGeneratedFiles": true,
-    "generateDefaultResponse": true
+    "generateDefaultResponse": true,
+    "pluginsForWhichToGenerateDoc": [
+      "email",
+      "upload",
+      "users-permissions"
+    ]
   },
   "servers": [
     {
@@ -27,7 +32,7 @@
       "description": "Development server"
     },
     {
-      "url": "YOUR_STAGING_SERVER",
+      "url": "https://misiones-travel.herokuapp.com/",
       "description": "Staging server"
     },
     {
@@ -37,7 +42,7 @@
   ],
   "externalDocs": {
     "description": "Find out more",
-    "url": "https://strapi.io/documentation/v3.x/"
+    "url": "https://strapi.io/documentation/"
   },
   "security": [
     {
