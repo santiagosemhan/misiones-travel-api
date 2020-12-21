@@ -16,13 +16,11 @@ module.exports = {
   async find(ctx) {
     let entities;
     if (ctx.query._q) {
-      entities = await strapi.services.localidades.search(ctx.query);
+      entities = await strapi.services.localidad.search(ctx.query);
     } else {
-      entities = await strapi.services.localidades.find(ctx.query);
+      entities = await strapi.services.localidad.find(ctx.query);
     }
 
-    
-
-    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.localidades }));
+    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.localidad }));
   },
 };
