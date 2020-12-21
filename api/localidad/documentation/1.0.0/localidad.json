@@ -530,6 +530,79 @@
           },
           "longitud": {
             "type": "number"
+          },
+          "lugares": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "direccion": {
+                  "type": "string"
+                },
+                "telefono": {
+                  "type": "string"
+                },
+                "sitio_web": {
+                  "type": "string"
+                },
+                "instagram": {
+                  "type": "string"
+                },
+                "facebook": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "imagenes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "imagen_miniatura": {
+                  "type": "string"
+                },
+                "activo": {
+                  "type": "boolean"
+                },
+                "latitud": {
+                  "type": "number"
+                },
+                "longitud": {
+                  "type": "number"
+                },
+                "categorias": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "localidad": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -543,6 +616,12 @@
           },
           "longitud": {
             "type": "number"
+          },
+          "lugares": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

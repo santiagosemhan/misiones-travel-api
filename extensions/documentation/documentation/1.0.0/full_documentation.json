@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/21/2020 11:06:57 AM"
+    "x-generation-date": "12/21/2020 11:35:05 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4809,6 +4809,79 @@
           },
           "longitud": {
             "type": "number"
+          },
+          "lugares": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "direccion": {
+                  "type": "string"
+                },
+                "telefono": {
+                  "type": "string"
+                },
+                "sitio_web": {
+                  "type": "string"
+                },
+                "instagram": {
+                  "type": "string"
+                },
+                "facebook": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "imagenes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "imagen_miniatura": {
+                  "type": "string"
+                },
+                "activo": {
+                  "type": "boolean"
+                },
+                "latitud": {
+                  "type": "number"
+                },
+                "longitud": {
+                  "type": "number"
+                },
+                "categorias": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "localidad": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -4822,6 +4895,12 @@
           },
           "longitud": {
             "type": "number"
+          },
+          "lugares": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
@@ -5076,6 +5155,12 @@
               },
               "longitud": {
                 "type": "number"
+              },
+              "lugares": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"

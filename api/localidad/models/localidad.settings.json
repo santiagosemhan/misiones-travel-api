@@ -19,6 +19,10 @@
     },
     "longitud": {
       "type": "float"
+    },
+    "lugares": {
+      "collection": "lugar",
+      "via": "localidad"
     }
   }
 }

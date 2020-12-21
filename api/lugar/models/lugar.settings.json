@@ -69,6 +69,7 @@
       "dominant": true
     },
     "localidad": {
+      "via": "lugares",
       "model": "localidad"
     }
   }
