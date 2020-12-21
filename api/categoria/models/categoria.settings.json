@@ -43,7 +43,10 @@
     },
     "lugares": {
       "via": "categorias",
-      "model": "lugar"
+      "collection": "lugar"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }

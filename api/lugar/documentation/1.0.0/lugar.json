@@ -726,6 +726,12 @@
                   "type": "boolean"
                 },
                 "lugares": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "slug": {
                   "type": "string"
                 },
                 "created_by": {
