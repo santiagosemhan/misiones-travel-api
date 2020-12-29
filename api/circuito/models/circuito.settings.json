@@ -43,6 +43,15 @@
     },
     "dificultad": {
       "type": "string"
+    },
+    "imagen_miniatura": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
