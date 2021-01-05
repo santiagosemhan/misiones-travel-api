@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_geoposicions",
+  "info": {
+    "name": "geoposicion",
+    "icon": "map-marked"
+  },
+  "options": {},
+  "attributes": {
+    "latitud": {
+      "type": "float"
+    },
+    "longitud": {
+      "type": "float"
+    }
+  }
+}

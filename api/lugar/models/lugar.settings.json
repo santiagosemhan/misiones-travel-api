@@ -57,20 +57,26 @@
       "type": "boolean",
       "default": true
     },
-    "latitud": {
-      "type": "float"
-    },
-    "longitud": {
-      "type": "float"
-    },
     "categorias": {
       "collection": "categoria",
       "via": "lugares",
       "dominant": true
     },
     "localidad": {
-      "via": "lugares",
-      "model": "localidad"
+      "model": "localidad",
+      "via": "lugares"
+    },
+    "rango_precio": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.rango-precio",
+      "required": true
+    },
+    "geoposicion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.geoposicion",
+      "required": true
     }
   }
 }

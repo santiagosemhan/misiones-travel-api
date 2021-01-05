@@ -517,7 +517,8 @@
       "Categoria": {
         "required": [
           "id",
-          "nombre"
+          "nombre",
+          "geoposicion"
         ],
         "properties": {
           "id": {
@@ -596,16 +597,11 @@
               }
             }
           },
-          "latitud": {
-            "type": "number"
-          },
-          "longitud": {
-            "type": "number"
-          },
           "categoria": {
             "required": [
               "id",
-              "nombre"
+              "nombre",
+              "geoposicion"
             ],
             "properties": {
               "id": {
@@ -619,12 +615,6 @@
               },
               "imagen": {
                 "type": "string"
-              },
-              "latitud": {
-                "type": "number"
-              },
-              "longitud": {
-                "type": "number"
               },
               "categoria": {
                 "type": "string"
@@ -640,6 +630,12 @@
               },
               "slug": {
                 "type": "string"
+              },
+              "color": {
+                "type": "string"
+              },
+              "geoposicion": {
+                "type": "component"
               },
               "created_by": {
                 "type": "string"
@@ -657,7 +653,9 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "rango_precio",
+                "geoposicion"
               ],
               "properties": {
                 "id": {
@@ -699,12 +697,6 @@
                 "activo": {
                   "type": "boolean"
                 },
-                "latitud": {
-                  "type": "number"
-                },
-                "longitud": {
-                  "type": "number"
-                },
                 "categorias": {
                   "type": "array",
                   "items": {
@@ -713,6 +705,12 @@
                 },
                 "localidad": {
                   "type": "string"
+                },
+                "rango_precio": {
+                  "type": "component"
+                },
+                "geoposicion": {
+                  "type": "component"
                 },
                 "published_at": {
                   "type": "string"
@@ -728,12 +726,33 @@
           },
           "slug": {
             "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "geoposicion": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "latitud": {
+                "type": "number"
+              },
+              "longitud": {
+                "type": "number"
+              }
+            }
           }
         }
       },
       "NewCategoria": {
         "required": [
-          "nombre"
+          "nombre",
+          "geoposicion"
         ],
         "properties": {
           "nombre": {
@@ -741,12 +760,6 @@
           },
           "descripcion": {
             "type": "string"
-          },
-          "latitud": {
-            "type": "number"
-          },
-          "longitud": {
-            "type": "number"
           },
           "categoria": {
             "type": "string"
@@ -763,6 +776,26 @@
           },
           "slug": {
             "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "geoposicion": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "latitud": {
+                "type": "number"
+              },
+              "longitud": {
+                "type": "number"
+              }
+            }
           },
           "created_by": {
             "type": "string"

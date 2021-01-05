@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_rango_precios",
+  "info": {
+    "name": "rango_precio",
+    "icon": "dollar-sign"
+  },
+  "options": {},
+  "attributes": {
+    "min": {
+      "type": "float"
+    },
+    "max": {
+      "type": "float"
+    }
+  }
+}

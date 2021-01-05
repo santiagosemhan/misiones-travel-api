@@ -516,7 +516,9 @@
     "schemas": {
       "Lugar": {
         "required": [
-          "id"
+          "id",
+          "rango_precio",
+          "geoposicion"
         ],
         "properties": {
           "id": {
@@ -687,18 +689,13 @@
             "type": "boolean",
             "default": true
           },
-          "latitud": {
-            "type": "number"
-          },
-          "longitud": {
-            "type": "number"
-          },
           "categorias": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "nombre"
+                "nombre",
+                "geoposicion"
               ],
               "properties": {
                 "id": {
@@ -712,12 +709,6 @@
                 },
                 "imagen": {
                   "type": "string"
-                },
-                "latitud": {
-                  "type": "number"
-                },
-                "longitud": {
-                  "type": "number"
                 },
                 "categoria": {
                   "type": "string"
@@ -733,6 +724,12 @@
                 },
                 "slug": {
                   "type": "string"
+                },
+                "color": {
+                  "type": "string"
+                },
+                "geoposicion": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"
@@ -774,6 +771,40 @@
               }
             }
           },
+          "rango_precio": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "min": {
+                "type": "number"
+              },
+              "max": {
+                "type": "number"
+              }
+            }
+          },
+          "geoposicion": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "latitud": {
+                "type": "number"
+              },
+              "longitud": {
+                "type": "number"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -781,6 +812,10 @@
         }
       },
       "NewLugar": {
+        "required": [
+          "rango_precio",
+          "geoposicion"
+        ],
         "properties": {
           "nombre": {
             "type": "string"
@@ -810,12 +845,6 @@
             "type": "boolean",
             "default": true
           },
-          "latitud": {
-            "type": "number"
-          },
-          "longitud": {
-            "type": "number"
-          },
           "categorias": {
             "type": "array",
             "items": {
@@ -824,6 +853,40 @@
           },
           "localidad": {
             "type": "string"
+          },
+          "rango_precio": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "min": {
+                "type": "number"
+              },
+              "max": {
+                "type": "number"
+              }
+            }
+          },
+          "geoposicion": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "latitud": {
+                "type": "number"
+              },
+              "longitud": {
+                "type": "number"
+              }
+            }
           },
           "published_at": {
             "type": "string",

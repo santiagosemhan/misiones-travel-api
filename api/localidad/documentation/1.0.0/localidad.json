@@ -535,7 +535,9 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "rango_precio",
+                "geoposicion"
               ],
               "properties": {
                 "id": {
@@ -577,12 +579,6 @@
                 "activo": {
                   "type": "boolean"
                 },
-                "latitud": {
-                  "type": "number"
-                },
-                "longitud": {
-                  "type": "number"
-                },
                 "categorias": {
                   "type": "array",
                   "items": {
@@ -591,6 +587,12 @@
                 },
                 "localidad": {
                   "type": "string"
+                },
+                "rango_precio": {
+                  "type": "component"
+                },
+                "geoposicion": {
+                  "type": "component"
                 },
                 "published_at": {
                   "type": "string"

@@ -28,12 +28,6 @@
       "plugin": "upload",
       "required": false
     },
-    "latitud": {
-      "type": "float"
-    },
-    "longitud": {
-      "type": "float"
-    },
     "categoria": {
       "model": "categoria"
     },
@@ -47,6 +41,15 @@
     },
     "slug": {
       "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "geoposicion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.geoposicion",
+      "required": true
     }
   }
 }
