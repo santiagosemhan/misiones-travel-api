@@ -13,7 +13,7 @@
   "attributes": {
     "nombre": {
       "type": "string",
-      "unique": true,
+      "unique": false,
       "required": true
     },
     "descripcion": {
@@ -36,8 +36,8 @@
       "default": true
     },
     "lugares": {
-      "via": "categorias",
-      "collection": "lugar"
+      "collection": "lugar",
+      "via": "categorias"
     },
     "slug": {
       "type": "string"

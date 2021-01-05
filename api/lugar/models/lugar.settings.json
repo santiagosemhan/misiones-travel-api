@@ -58,8 +58,8 @@
       "default": true
     },
     "categorias": {
-      "collection": "categoria",
       "via": "lugares",
+      "collection": "categoria",
       "dominant": true
     },
     "localidad": {
