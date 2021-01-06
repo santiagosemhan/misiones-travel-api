@@ -517,7 +517,6 @@
       "Lugar": {
         "required": [
           "id",
-          "rango_precio",
           "geoposicion"
         ],
         "properties": {
@@ -805,6 +804,57 @@
               }
             }
           },
+          "etiquetas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nombre"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "lugares": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "horarios_apertura": {
+            "type": "string"
+          },
+          "recomendaciones": {
+            "type": "string"
+          },
+          "duracion_paseo": {
+            "type": "string"
+          },
+          "dificultad_acceso": {
+            "type": "string",
+            "enum": [
+              "muy_malo",
+              "malo",
+              "regular",
+              "facil",
+              "muy_facil"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -813,7 +863,6 @@
       },
       "NewLugar": {
         "required": [
-          "rango_precio",
           "geoposicion"
         ],
         "properties": {
@@ -887,6 +936,31 @@
                 "type": "number"
               }
             }
+          },
+          "etiquetas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "horarios_apertura": {
+            "type": "string"
+          },
+          "recomendaciones": {
+            "type": "string"
+          },
+          "duracion_paseo": {
+            "type": "string"
+          },
+          "dificultad_acceso": {
+            "type": "string",
+            "enum": [
+              "muy_malo",
+              "malo",
+              "regular",
+              "facil",
+              "muy_facil"
+            ]
           },
           "published_at": {
             "type": "string",

@@ -536,7 +536,6 @@
             "items": {
               "required": [
                 "id",
-                "rango_precio",
                 "geoposicion"
               ],
               "properties": {
@@ -593,6 +592,24 @@
                 },
                 "geoposicion": {
                   "type": "component"
+                },
+                "etiquetas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "horarios_apertura": {
+                  "type": "string"
+                },
+                "recomendaciones": {
+                  "type": "string"
+                },
+                "duracion_paseo": {
+                  "type": "string"
+                },
+                "dificultad_acceso": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
