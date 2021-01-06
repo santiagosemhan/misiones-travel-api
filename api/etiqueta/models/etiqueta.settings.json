@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "etiquetas",
+  "info": {
+    "name": "etiqueta",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "lugares": {
+      "via": "etiquetas",
+      "collection": "lugar"
+    }
+  }
+}
