@@ -36,8 +36,8 @@
       "default": true
     },
     "lugares": {
-      "collection": "lugar",
-      "via": "categorias"
+      "via": "categorias",
+      "collection": "lugar"
     },
     "slug": {
       "type": "string"

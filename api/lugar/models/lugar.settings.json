@@ -58,8 +58,8 @@
       "default": true
     },
     "categorias": {
-      "via": "lugares",
       "collection": "categoria",
+      "via": "lugares",
       "dominant": true
     },
     "localidad": {
@@ -70,13 +70,37 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.rango-precio",
-      "required": true
+      "required": false
     },
     "geoposicion": {
       "type": "component",
       "repeatable": false,
       "component": "elements.geoposicion",
       "required": true
+    },
+    "etiquetas": {
+      "collection": "etiqueta",
+      "via": "lugares",
+      "dominant": true
+    },
+    "horarios_apertura": {
+      "type": "richtext"
+    },
+    "recomendaciones": {
+      "type": "richtext"
+    },
+    "duracion_paseo": {
+      "type": "string"
+    },
+    "dificultad_acceso": {
+      "type": "enumeration",
+      "enum": [
+        "muy_malo",
+        "malo",
+        "regular",
+        "facil",
+        "muy_facil"
+      ]
     }
   }
 }
