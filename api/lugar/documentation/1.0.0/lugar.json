@@ -855,6 +855,9 @@
               "muy_facil"
             ]
           },
+          "location": {
+            "type": "object"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -961,6 +964,9 @@
               "facil",
               "muy_facil"
             ]
+          },
+          "location": {
+            "type": "object"
           },
           "published_at": {
             "type": "string",

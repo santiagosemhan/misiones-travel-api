@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/06/2021 10:16:07 AM"
+    "x-generation-date": "01/07/2021 7:47:16 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4921,6 +4921,9 @@
                 "dificultad_acceso": {
                   "type": "string"
                 },
+                "location": {
+                  "type": "object"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -5205,6 +5208,9 @@
                     "dificultad_acceso": {
                       "type": "string"
                     },
+                    "location": {
+                      "type": "object"
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -5420,6 +5426,9 @@
                     "dificultad_acceso": {
                       "type": "string"
                     },
+                    "location": {
+                      "type": "object"
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -5553,6 +5562,9 @@
                 },
                 "dificultad_acceso": {
                   "type": "string"
+                },
+                "location": {
+                  "type": "object"
                 },
                 "published_at": {
                   "type": "string"
@@ -5689,6 +5701,9 @@
                 },
                 "dificultad_acceso": {
                   "type": "string"
+                },
+                "location": {
+                  "type": "object"
                 },
                 "published_at": {
                   "type": "string"
@@ -6070,6 +6085,9 @@
               "muy_facil"
             ]
           },
+          "location": {
+            "type": "object"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6176,6 +6194,9 @@
               "facil",
               "muy_facil"
             ]
+          },
+          "location": {
+            "type": "object"
           },
           "published_at": {
             "type": "string",

@@ -705,6 +705,9 @@
                     "dificultad_acceso": {
                       "type": "string"
                     },
+                    "location": {
+                      "type": "object"
+                    },
                     "published_at": {
                       "type": "string"
                     },
@@ -919,6 +922,9 @@
                     },
                     "dificultad_acceso": {
                       "type": "string"
+                    },
+                    "location": {
+                      "type": "object"
                     },
                     "published_at": {
                       "type": "string"
