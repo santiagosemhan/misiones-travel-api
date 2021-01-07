@@ -101,6 +101,9 @@
         "facil",
         "muy_facil"
       ]
+    },
+    "location": {
+      "type": "json"
     }
   }
 }
