@@ -103,7 +103,8 @@
       ]
     },
     "location": {
-      "type": "json"
+      "type": "json",
+      "index": "2dsphere"
     }
   }
 }
