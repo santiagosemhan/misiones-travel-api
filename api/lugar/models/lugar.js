@@ -5,7 +5,7 @@
  * to customize this model
  */
 
-const getLocation = async (data) => {
+const getLocation = (data) => {
   let location;
   if (
     data.geoposicion &&
@@ -26,10 +26,10 @@ module.exports = {
    */
   lifecycles: {
     async beforeCreate(data) {
-      data.location = await getLocation(data);
+      data.location = getLocation(data);
     },
     async beforeUpdate(id, data) {
-      data.location = await getLocation(data);
+      data.location = getLocation(data);
     },
   },
 };
