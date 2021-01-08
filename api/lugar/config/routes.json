@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/lugares/near",
+      "handler": "lugar.near",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/lugares/:id",
       "handler": "lugar.findOne",
       "config": {
