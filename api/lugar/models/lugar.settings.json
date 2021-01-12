@@ -95,8 +95,8 @@
     "dificultad_acceso": {
       "type": "enumeration",
       "enum": [
-        "muy_malo",
-        "malo",
+        "muy_dificil",
+        "dificil",
         "regular",
         "facil",
         "muy_facil"
