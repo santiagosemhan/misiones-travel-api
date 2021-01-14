@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/08/2021 9:55:38 AM"
+    "x-generation-date": "01/14/2021 6:21:11 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4886,6 +4886,9 @@
               "geoposicion": {
                 "type": "component"
               },
+              "location": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -4978,8 +4981,14 @@
                 "dificultad_acceso": {
                   "type": "string"
                 },
+                "relacionados": {
+                  "type": "string"
+                },
                 "location": {
                   "type": "object"
+                },
+                "relevancia": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -5015,6 +5024,9 @@
                 "type": "number"
               }
             }
+          },
+          "location": {
+            "type": "object"
           }
         }
       },
@@ -5065,6 +5077,9 @@
                 "type": "number"
               }
             }
+          },
+          "location": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"
@@ -5265,8 +5280,14 @@
                     "dificultad_acceso": {
                       "type": "string"
                     },
+                    "relacionados": {
+                      "type": "string"
+                    },
                     "location": {
                       "type": "object"
+                    },
+                    "relevancia": {
+                      "type": "string"
                     },
                     "published_at": {
                       "type": "string"
@@ -5483,8 +5504,14 @@
                     "dificultad_acceso": {
                       "type": "string"
                     },
+                    "relacionados": {
+                      "type": "string"
+                    },
                     "location": {
                       "type": "object"
+                    },
+                    "relevancia": {
+                      "type": "string"
                     },
                     "published_at": {
                       "type": "string"
@@ -5620,8 +5647,14 @@
                 "dificultad_acceso": {
                   "type": "string"
                 },
+                "relacionados": {
+                  "type": "string"
+                },
                 "location": {
                   "type": "object"
+                },
+                "relevancia": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -5759,8 +5792,14 @@
                 "dificultad_acceso": {
                   "type": "string"
                 },
+                "relacionados": {
+                  "type": "string"
+                },
                 "location": {
                   "type": "object"
+                },
+                "relevancia": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -6017,6 +6056,9 @@
                 "geoposicion": {
                   "type": "component"
                 },
+                "location": {
+                  "type": "object"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -6135,15 +6177,123 @@
           "dificultad_acceso": {
             "type": "string",
             "enum": [
-              "muy_malo",
-              "malo",
+              "muy_dificil",
+              "dificil",
               "regular",
               "facil",
               "muy_facil"
             ]
           },
+          "relacionados": {
+            "required": [
+              "id",
+              "geoposicion"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "descripcion": {
+                "type": "string"
+              },
+              "direccion": {
+                "type": "string"
+              },
+              "telefono": {
+                "type": "string"
+              },
+              "sitio_web": {
+                "type": "string"
+              },
+              "instagram": {
+                "type": "string"
+              },
+              "facebook": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "imagenes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "imagen_miniatura": {
+                "type": "string"
+              },
+              "activo": {
+                "type": "boolean"
+              },
+              "categorias": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "localidad": {
+                "type": "string"
+              },
+              "rango_precio": {
+                "type": "component"
+              },
+              "geoposicion": {
+                "type": "component"
+              },
+              "etiquetas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "horarios_apertura": {
+                "type": "string"
+              },
+              "recomendaciones": {
+                "type": "string"
+              },
+              "duracion_paseo": {
+                "type": "string"
+              },
+              "dificultad_acceso": {
+                "type": "string"
+              },
+              "relacionados": {
+                "type": "string"
+              },
+              "location": {
+                "type": "object"
+              },
+              "relevancia": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "location": {
             "type": "object"
+          },
+          "relevancia": {
+            "type": "string",
+            "enum": [
+              "muy_baja",
+              "baja",
+              "regular",
+              "alta",
+              "muy_alta"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -6245,15 +6395,28 @@
           "dificultad_acceso": {
             "type": "string",
             "enum": [
-              "muy_malo",
-              "malo",
+              "muy_dificil",
+              "dificil",
               "regular",
               "facil",
               "muy_facil"
             ]
           },
+          "relacionados": {
+            "type": "string"
+          },
           "location": {
             "type": "object"
+          },
+          "relevancia": {
+            "type": "string",
+            "enum": [
+              "muy_baja",
+              "baja",
+              "regular",
+              "alta",
+              "muy_alta"
+            ]
           },
           "published_at": {
             "type": "string",

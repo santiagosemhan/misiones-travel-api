@@ -637,6 +637,9 @@
               "geoposicion": {
                 "type": "component"
               },
+              "location": {
+                "type": "object"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -729,8 +732,14 @@
                 "dificultad_acceso": {
                   "type": "string"
                 },
+                "relacionados": {
+                  "type": "string"
+                },
                 "location": {
                   "type": "object"
+                },
+                "relevancia": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -766,6 +775,9 @@
                 "type": "number"
               }
             }
+          },
+          "location": {
+            "type": "object"
           }
         }
       },
@@ -816,6 +828,9 @@
                 "type": "number"
               }
             }
+          },
+          "location": {
+            "type": "object"
           },
           "created_by": {
             "type": "string"

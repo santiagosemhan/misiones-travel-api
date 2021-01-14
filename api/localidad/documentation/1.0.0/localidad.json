@@ -611,8 +611,14 @@
                 "dificultad_acceso": {
                   "type": "string"
                 },
+                "relacionados": {
+                  "type": "string"
+                },
                 "location": {
                   "type": "object"
+                },
+                "relevancia": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
