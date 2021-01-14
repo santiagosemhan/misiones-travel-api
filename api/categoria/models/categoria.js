@@ -20,6 +20,21 @@ const getSlug = async (categoria) => {
   return slug;
 };
 
+const getLocation = (data) => {
+  let location;
+  if (
+    data.geoposicion &&
+    data.geoposicion.latitud &&
+    data.geoposicion.longitud
+  ) {
+    location = {
+      type: "Point",
+      coordinates: [data.geoposicion.latitud, data.geoposicion.longitud],
+    };
+  }
+  return location;
+};
+
 module.exports = {
   /**
    * Triggered before user creation.
@@ -27,9 +42,11 @@ module.exports = {
   lifecycles: {
     async beforeCreate(data) {
       data.slug = await getSlug(data);
+      data.location = getLocation(data);
     },
     async beforeUpdate(id, data) {
       data.slug = await getSlug(data);
+      data.location = getLocation(data);
     },
   },
 };

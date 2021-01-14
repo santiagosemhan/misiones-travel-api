@@ -58,8 +58,8 @@
       "default": true
     },
     "categorias": {
-      "collection": "categoria",
       "via": "lugares",
+      "collection": "categoria",
       "dominant": true
     },
     "localidad": {
@@ -102,9 +102,22 @@
         "muy_facil"
       ]
     },
+    "relacionados": {
+      "collection": "lugar"
+    },
     "location": {
       "type": "json",
       "index": "2dsphere"
+    },
+    "relevancia": {
+      "type": "enumeration",
+      "enum": [
+        "muy_baja",
+        "baja",
+        "regular",
+        "alta",
+        "muy_alta"
+      ]
     }
   }
 }

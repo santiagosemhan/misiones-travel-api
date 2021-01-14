@@ -36,8 +36,8 @@
       "default": true
     },
     "lugares": {
-      "via": "categorias",
-      "collection": "lugar"
+      "collection": "lugar",
+      "via": "categorias"
     },
     "slug": {
       "type": "string"
@@ -50,6 +50,10 @@
       "repeatable": false,
       "component": "elements.geoposicion",
       "required": true
+    },
+    "location": {
+      "type": "json",
+      "index": "2dsphere"
     }
   }
 }
