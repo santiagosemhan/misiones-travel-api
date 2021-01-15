@@ -29,7 +29,7 @@ const getLocation = (data) => {
   ) {
     location = {
       type: "Point",
-      coordinates: [data.geoposicion.latitud, data.geoposicion.longitud],
+      coordinates: [data.geoposicion.longitud, data.geoposicion.latitud],
     };
   }
   return location;
