@@ -25,10 +25,7 @@
     "strapi-utils": "3.4.3"
   },
   "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "6a7b62a9-6e9c-4abd-ad64-db945a95f07a"
+    "name": "Santiago Semhan <santiagosemhan@gmail.com>"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
