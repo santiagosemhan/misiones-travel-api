@@ -724,6 +724,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "nombre": {
+                  "type": "string"
                 }
               }
             }
@@ -948,6 +951,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "nombre": {
+                  "type": "string"
                 }
               }
             }

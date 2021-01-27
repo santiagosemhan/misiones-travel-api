@@ -27,6 +27,10 @@
     },
     "lugar": {
       "model": "lugar"
+    },
+    "nombre": {
+      "type": "string",
+      "required": false
     }
   }
 }
