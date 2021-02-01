@@ -727,6 +727,9 @@
                 },
                 "nombre": {
                   "type": "string"
+                },
+                "duracion": {
+                  "type": "number"
                 }
               }
             }
@@ -739,9 +742,6 @@
             "type": "number"
           },
           "terreno": {
-            "type": "string"
-          },
-          "dificultad": {
             "type": "string"
           },
           "imagen_miniatura": {
@@ -810,6 +810,16 @@
                 "type": "string"
               }
             }
+          },
+          "dificultad": {
+            "type": "string",
+            "enum": [
+              "muy_dificil",
+              "dificil",
+              "regular",
+              "facil",
+              "muy_facil"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -954,6 +964,9 @@
                 },
                 "nombre": {
                   "type": "string"
+                },
+                "duracion": {
+                  "type": "number"
                 }
               }
             }
@@ -969,7 +982,14 @@
             "type": "string"
           },
           "dificultad": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "muy_dificil",
+              "dificil",
+              "regular",
+              "facil",
+              "muy_facil"
+            ]
           },
           "published_at": {
             "type": "string",

@@ -41,9 +41,6 @@
     "terreno": {
       "type": "string"
     },
-    "dificultad": {
-      "type": "string"
-    },
     "imagen_miniatura": {
       "model": "file",
       "via": "related",
@@ -52,6 +49,16 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "dificultad": {
+      "type": "enumeration",
+      "enum": [
+        "muy_dificil",
+        "dificil",
+        "regular",
+        "facil",
+        "muy_facil"
+      ]
     }
   }
 }
