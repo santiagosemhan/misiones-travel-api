@@ -59,6 +59,14 @@
         "facil",
         "muy_facil"
       ]
+    },
+    "modalidad": {
+      "type": "enumeration",
+      "enum": [
+        "driving",
+        "walking",
+        "cycling"
+      ]
     }
   }
 }
