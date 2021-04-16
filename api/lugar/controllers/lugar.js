@@ -20,7 +20,7 @@ module.exports = {
       return ctx.throw(400, "coordinates param is invalid.");
     }
 
-    const modelQuery = {
+    let modelQuery = {
       location: {
         $near: {
           $geometry: {
