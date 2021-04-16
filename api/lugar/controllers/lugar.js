@@ -47,7 +47,7 @@ module.exports = {
 
     if (where) {
       where.forEach(clause => {
-        modelQuery = { ...modelQuery, clause };
+        modelQuery = { ...modelQuery, ...clause };
       });
     }
 
