@@ -1,4 +1,5 @@
 "use strict";
+const qs = require("qs");
 
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
@@ -9,7 +10,13 @@ module.exports = {
   // GET /near
   async near(ctx) {
     const { query } = ctx.request;
-    const { coordinates, minDistance = 100, maxDistance = 5000, sort } = query;
+    const {
+      coordinates,
+      minDistance = 100,
+      maxDistance = 5000,
+      where,
+      sort,
+    } = query;
     if (!coordinates) {
       ctx.status = 400;
       return ctx.throw(400, "coordinates param is required.");
@@ -32,10 +39,14 @@ module.exports = {
         },
       },
       published_at: { $ne: null },
-    }
+    };
 
     if (sort) {
-      modelQuery = { ...modelQuery, _sort: sort}
+      modelQuery = { ...modelQuery, _sort: sort };
+    }
+
+    if (where) {
+      modelQuery = { ...modelQuery, _where: qs.parse(where) };
     }
 
     const lugares = await strapi.query("lugar").model.find(modelQuery);
