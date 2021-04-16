@@ -47,11 +47,11 @@ module.exports = {
     }
 
     if (where) {
-      modelQuery = { ...modelQuery, _where: qs.parse(where) };
+      modelQuery = { ...modelQuery, _where: qs.parse(where, { allowSparse: true }) };
     }
 
     if (limit) {
-      modelQuery = { ...modelQuery, _limit: limit };
+      modelQuery = { ...modelQuery, _limit: Number(limit) };
     }
 
     console.log(modelQuery);
