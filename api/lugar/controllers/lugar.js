@@ -16,6 +16,7 @@ module.exports = {
       maxDistance = 5000,
       where,
       sort,
+      limit
     } = query;
     if (!coordinates) {
       ctx.status = 400;
@@ -48,6 +49,12 @@ module.exports = {
     if (where) {
       modelQuery = { ...modelQuery, _where: qs.parse(where) };
     }
+
+    if (limit) {
+      modelQuery = { ...modelQuery, _limit: limit };
+    }
+
+    console.log(modelQuery);
 
     const lugares = await strapi.query("lugar").model.find(modelQuery);
 
