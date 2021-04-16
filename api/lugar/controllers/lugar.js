@@ -1,5 +1,4 @@
 "use strict";
-const qs = require("qs");
 
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
@@ -45,9 +44,9 @@ module.exports = {
     if (sort) {
       modelQuery = { ...modelQuery, _sort: sort };
     }
-
+    
     if (where) {
-      modelQuery = { ...modelQuery, _where: qs.parse(where, { allowSparse: true }) };
+      modelQuery = { ...modelQuery, _where: where };
     }
 
     if (limit) {
