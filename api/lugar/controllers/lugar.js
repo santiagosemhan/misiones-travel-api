@@ -44,9 +44,11 @@ module.exports = {
     if (sort) {
       modelQuery = { ...modelQuery, _sort: sort };
     }
-    
+
     if (where) {
-      modelQuery = { ...modelQuery, _where: where };
+      where.forEach(clause => {
+        modelQuery = { ...modelQuery, clause };
+      });
     }
 
     if (limit) {
