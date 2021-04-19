@@ -14,7 +14,6 @@ module.exports = {
       minDistance = 100,
       maxDistance = 5000,
       where,
-      sort = { createdAt: -1 },
       limit = 20,
     } = query;
     if (!coordinates) {
@@ -29,7 +28,7 @@ module.exports = {
 
     let modelQuery = {
       location: {
-        $near: {
+        $nearSphere: {
           $geometry: {
             type: "Point",
             coordinates: [lat, lng],
@@ -52,7 +51,6 @@ module.exports = {
     const lugares = await strapi
       .query("lugar")
       .model.find(modelQuery)
-      .sort(sort)
       .limit(Number(limit));
 
     ctx.send(lugares);
