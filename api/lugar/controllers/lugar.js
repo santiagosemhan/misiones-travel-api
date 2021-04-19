@@ -14,8 +14,8 @@ module.exports = {
       minDistance = 100,
       maxDistance = 5000,
       where,
-      sort,
-      limit
+      sort = { createdAt: -1 },
+      limit = 20,
     } = query;
     if (!coordinates) {
       ctx.status = 400;
@@ -41,23 +41,19 @@ module.exports = {
       published_at: { $ne: null },
     };
 
-    if (sort) {
-      modelQuery = { ...modelQuery, _sort: sort };
-    }
-
     if (where) {
-      where.forEach(clause => {
+      where.forEach((clause) => {
         modelQuery = { ...modelQuery, ...clause };
       });
     }
 
-    if (limit) {
-      modelQuery = { ...modelQuery, _limit: Number(limit) };
-    }
-
     console.log(modelQuery);
 
-    const lugares = await strapi.query("lugar").model.find(modelQuery);
+    const lugares = await strapi
+      .query("lugar")
+      .model.find(modelQuery)
+      .sort(sort)
+      .limit(Number(limit));
 
     ctx.send(lugares);
   },
