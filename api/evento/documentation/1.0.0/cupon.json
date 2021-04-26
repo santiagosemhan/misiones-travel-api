@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/circuitos": {
+    "/cupons": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Circuito"
+                    "$ref": "#/components/schemas/Cupon"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Circuito"
+          "Cupon"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Circuito"
+                  "$ref": "#/components/schemas/Cupon"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Circuito"
+          "Cupon"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCircuito"
+                "$ref": "#/components/schemas/NewCupon"
               }
             }
           }
         }
       }
     },
-    "/circuitos/count": {
+    "/cupons/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Circuito"
+          "Cupon"
         ],
         "parameters": []
       }
     },
-    "/circuitos/{id}": {
+    "/cupons/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Circuito"
+                  "$ref": "#/components/schemas/Cupon"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Circuito"
+          "Cupon"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Circuito"
+                  "$ref": "#/components/schemas/Cupon"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Circuito"
+          "Cupon"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCircuito"
+                "$ref": "#/components/schemas/NewCupon"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Circuito"
+          "Cupon"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Circuito": {
+      "Cupon": {
         "required": [
           "id"
         ],
@@ -525,305 +525,117 @@
           "nombre": {
             "type": "string"
           },
-          "descripcion": {
-            "type": "string"
-          },
-          "imagenes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "circuito": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "distancia": {
-                  "type": "number"
-                },
-                "tipo_ruta": {
-                  "type": "string",
-                  "enum": [
-                    "asfalto",
-                    "tierra",
-                    "asfalto_y_tierra"
-                  ]
-                },
-                "unidad_distancia": {
-                  "type": "string",
-                  "enum": [
-                    "mts",
-                    "kms"
-                  ]
-                },
-                "lugar": {
-                  "required": [
-                    "id",
-                    "geoposicion"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "nombre": {
-                      "type": "string"
-                    },
-                    "descripcion": {
-                      "type": "string"
-                    },
-                    "direccion": {
-                      "type": "string"
-                    },
-                    "telefono": {
-                      "type": "string"
-                    },
-                    "sitio_web": {
-                      "type": "string"
-                    },
-                    "instagram": {
-                      "type": "string"
-                    },
-                    "facebook": {
-                      "type": "string"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "imagenes": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "imagen_miniatura": {
-                      "type": "string"
-                    },
-                    "activo": {
-                      "type": "boolean"
-                    },
-                    "categorias": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "localidad": {
-                      "type": "string"
-                    },
-                    "rango_precio": {
-                      "type": "component"
-                    },
-                    "geoposicion": {
-                      "type": "component"
-                    },
-                    "etiquetas": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "horarios_apertura": {
-                      "type": "string"
-                    },
-                    "recomendaciones": {
-                      "type": "string"
-                    },
-                    "duracion_paseo": {
-                      "type": "string"
-                    },
-                    "dificultad_acceso": {
-                      "type": "string",
-                      "enum": [
-                        "muy_dificil",
-                        "dificil",
-                        "regular",
-                        "facil",
-                        "muy_facil"
-                      ]
-                    },
-                    "relacionados": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "location": {
-                      "type": "object"
-                    },
-                    "relevancia": {
-                      "type": "string",
-                      "enum": [
-                        "muy_baja",
-                        "baja",
-                        "regular",
-                        "alta",
-                        "muy_alta"
-                      ]
-                    },
-                    "eventos": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "published_at": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "nombre": {
-                  "type": "string"
-                },
-                "duracion": {
-                  "type": "number"
-                }
-              }
-            }
-          },
-          "activo": {
-            "type": "boolean",
-            "default": true
-          },
-          "distancia_total": {
-            "type": "number"
-          },
-          "terreno": {
-            "type": "string"
-          },
-          "imagen_miniatura": {
+          "lugar": {
             "required": [
               "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "geoposicion"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "nombre": {
                 "type": "string"
               },
-              "alternativeText": {
+              "descripcion": {
                 "type": "string"
               },
-              "caption": {
+              "direccion": {
                 "type": "string"
               },
-              "width": {
-                "type": "integer"
+              "telefono": {
+                "type": "string"
               },
-              "height": {
-                "type": "integer"
+              "sitio_web": {
+                "type": "string"
               },
-              "formats": {
+              "instagram": {
+                "type": "string"
+              },
+              "facebook": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "imagenes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "imagen_miniatura": {
+                "type": "string"
+              },
+              "activo": {
+                "type": "boolean"
+              },
+              "categorias": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "localidad": {
+                "type": "string"
+              },
+              "rango_precio": {
+                "type": "component"
+              },
+              "geoposicion": {
+                "type": "component"
+              },
+              "etiquetas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "horarios_apertura": {
+                "type": "string"
+              },
+              "recomendaciones": {
+                "type": "string"
+              },
+              "duracion_paseo": {
+                "type": "string"
+              },
+              "dificultad_acceso": {
+                "type": "string",
+                "enum": [
+                  "muy_dificil",
+                  "dificil",
+                  "regular",
+                  "facil",
+                  "muy_facil"
+                ]
+              },
+              "relacionados": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "location": {
                 "type": "object"
               },
-              "hash": {
-                "type": "string"
+              "relevancia": {
+                "type": "string",
+                "enum": [
+                  "muy_baja",
+                  "baja",
+                  "regular",
+                  "alta",
+                  "muy_alta"
+                ]
               },
-              "ext": {
-                "type": "string"
+              "cupones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
+              "published_at": {
                 "type": "string"
               },
               "created_by": {
@@ -834,228 +646,74 @@
               }
             }
           },
-          "dificultad": {
-            "type": "string",
-            "enum": [
-              "muy_dificil",
-              "dificil",
-              "regular",
-              "facil",
-              "muy_facil"
-            ]
-          },
-          "modalidad": {
-            "type": "string",
-            "enum": [
-              "driving",
-              "walking",
-              "cycling"
-            ]
-          },
-          "published_at": {
+          "fecha": {
             "type": "string",
             "format": "date-time"
-          }
-        }
-      },
-      "NewCircuito": {
-        "properties": {
-          "nombre": {
-            "type": "string"
           },
           "descripcion": {
             "type": "string"
           },
-          "circuito": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
+          "activo": {
+            "type": "boolean",
+            "default": false
+          },
+          "categoria_evento": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "descripcion": {
+                "type": "string"
+              },
+              "activo": {
+                "type": "boolean"
+              },
+              "color": {
+                "type": "string"
+              },
+              "eventos": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "distancia": {
-                  "type": "number"
-                },
-                "tipo_ruta": {
-                  "type": "string",
-                  "enum": [
-                    "asfalto",
-                    "tierra",
-                    "asfalto_y_tierra"
-                  ]
-                },
-                "unidad_distancia": {
-                  "type": "string",
-                  "enum": [
-                    "mts",
-                    "kms"
-                  ]
-                },
-                "lugar": {
-                  "required": [
-                    "id",
-                    "geoposicion"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "nombre": {
-                      "type": "string"
-                    },
-                    "descripcion": {
-                      "type": "string"
-                    },
-                    "direccion": {
-                      "type": "string"
-                    },
-                    "telefono": {
-                      "type": "string"
-                    },
-                    "sitio_web": {
-                      "type": "string"
-                    },
-                    "instagram": {
-                      "type": "string"
-                    },
-                    "facebook": {
-                      "type": "string"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "imagenes": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "imagen_miniatura": {
-                      "type": "string"
-                    },
-                    "activo": {
-                      "type": "boolean"
-                    },
-                    "categorias": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "localidad": {
-                      "type": "string"
-                    },
-                    "rango_precio": {
-                      "type": "component"
-                    },
-                    "geoposicion": {
-                      "type": "component"
-                    },
-                    "etiquetas": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "horarios_apertura": {
-                      "type": "string"
-                    },
-                    "recomendaciones": {
-                      "type": "string"
-                    },
-                    "duracion_paseo": {
-                      "type": "string"
-                    },
-                    "dificultad_acceso": {
-                      "type": "string",
-                      "enum": [
-                        "muy_dificil",
-                        "dificil",
-                        "regular",
-                        "facil",
-                        "muy_facil"
-                      ]
-                    },
-                    "relacionados": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "location": {
-                      "type": "object"
-                    },
-                    "relevancia": {
-                      "type": "string",
-                      "enum": [
-                        "muy_baja",
-                        "baja",
-                        "regular",
-                        "alta",
-                        "muy_alta"
-                      ]
-                    },
-                    "eventos": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "published_at": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "nombre": {
-                  "type": "string"
-                },
-                "duracion": {
-                  "type": "number"
                 }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
+          }
+        }
+      },
+      "NewCupon": {
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "lugar": {
+            "type": "string"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "descripcion": {
+            "type": "string"
           },
           "activo": {
             "type": "boolean",
-            "default": true
+            "default": false
           },
-          "distancia_total": {
-            "type": "number"
-          },
-          "terreno": {
+          "categoria_evento": {
             "type": "string"
-          },
-          "dificultad": {
-            "type": "string",
-            "enum": [
-              "muy_dificil",
-              "dificil",
-              "regular",
-              "facil",
-              "muy_facil"
-            ]
-          },
-          "modalidad": {
-            "type": "string",
-            "enum": [
-              "driving",
-              "walking",
-              "cycling"
-            ]
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -1069,7 +727,7 @@
   },
   "tags": [
     {
-      "name": "Circuito"
+      "name": "Cupon"
     }
   ]
 }

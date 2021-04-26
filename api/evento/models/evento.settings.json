@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos",
+  "info": {
+    "name": "Evento",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "lugar": {
+      "model": "lugar",
+      "via": "eventos"
+    },
+    "fecha": {
+      "type": "datetime"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "activo": {
+      "type": "boolean",
+      "default": false
+    },
+    "categoria_evento": {
+      "model": "categoria-eventos",
+      "via": "eventos"
+    }
+  }
+}

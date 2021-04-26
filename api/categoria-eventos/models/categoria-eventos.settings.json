@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoria_eventos",
+  "info": {
+    "name": "CategoriaEventos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "activo": {
+      "type": "boolean",
+      "default": false
+    },
+    "color": {
+      "type": "string"
+    },
+    "eventos": {
+      "via": "categoria_evento",
+      "collection": "evento"
+    }
+  }
+}

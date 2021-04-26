@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/categoria-eventos",
+      "handler": "categoria-eventos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/categoria-eventos/count",
+      "handler": "categoria-eventos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/categoria-eventos/:id",
+      "handler": "categoria-eventos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/categoria-eventos",
+      "handler": "categoria-eventos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/categoria-eventos/:id",
+      "handler": "categoria-eventos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/categoria-eventos/:id",
+      "handler": "categoria-eventos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

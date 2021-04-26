@@ -730,16 +730,39 @@
                   "type": "string"
                 },
                 "dificultad_acceso": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "muy_dificil",
+                    "dificil",
+                    "regular",
+                    "facil",
+                    "muy_facil"
+                  ]
                 },
                 "relacionados": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "location": {
                   "type": "object"
                 },
                 "relevancia": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "muy_baja",
+                    "baja",
+                    "regular",
+                    "alta",
+                    "muy_alta"
+                  ]
+                },
+                "eventos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"

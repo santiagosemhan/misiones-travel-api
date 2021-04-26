@@ -118,6 +118,10 @@
         "alta",
         "muy_alta"
       ]
+    },
+    "eventos": {
+      "via": "lugar",
+      "collection": "evento"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/etiquetas": {
+    "/cupons": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Etiqueta"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Etiqueta"
+          "Unclassified"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Etiqueta"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Etiqueta"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewEtiqueta"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/etiquetas/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Etiqueta"
+          "Unclassified"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUnclassified"
+              }
+            }
+          }
+        }
       }
     },
-    "/etiquetas/{id}": {
+    "/cupons/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Etiqueta"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Etiqueta"
+          "Unclassified"
+        ],
+        "parameters": []
+      }
+    },
+    "/cupons/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Unclassified"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Etiqueta"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Etiqueta"
+          "Unclassified"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEtiqueta"
+                "$ref": "#/components/schemas/NewUnclassified"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Etiqueta"
+          "Unclassified"
         ],
         "parameters": [
           {
@@ -512,179 +525,9 @@
       }
     }
   },
-  "components": {
-    "schemas": {
-      "Etiqueta": {
-        "required": [
-          "id",
-          "nombre"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "nombre": {
-            "type": "string"
-          },
-          "descripcion": {
-            "type": "string"
-          },
-          "lugares": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "geoposicion"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "nombre": {
-                  "type": "string"
-                },
-                "descripcion": {
-                  "type": "string"
-                },
-                "direccion": {
-                  "type": "string"
-                },
-                "telefono": {
-                  "type": "string"
-                },
-                "sitio_web": {
-                  "type": "string"
-                },
-                "instagram": {
-                  "type": "string"
-                },
-                "facebook": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "imagenes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "imagen_miniatura": {
-                  "type": "string"
-                },
-                "activo": {
-                  "type": "boolean"
-                },
-                "categorias": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "localidad": {
-                  "type": "string"
-                },
-                "rango_precio": {
-                  "type": "component"
-                },
-                "geoposicion": {
-                  "type": "component"
-                },
-                "etiquetas": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "horarios_apertura": {
-                  "type": "string"
-                },
-                "recomendaciones": {
-                  "type": "string"
-                },
-                "duracion_paseo": {
-                  "type": "string"
-                },
-                "dificultad_acceso": {
-                  "type": "string",
-                  "enum": [
-                    "muy_dificil",
-                    "dificil",
-                    "regular",
-                    "facil",
-                    "muy_facil"
-                  ]
-                },
-                "relacionados": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "location": {
-                  "type": "object"
-                },
-                "relevancia": {
-                  "type": "string",
-                  "enum": [
-                    "muy_baja",
-                    "baja",
-                    "regular",
-                    "alta",
-                    "muy_alta"
-                  ]
-                },
-                "eventos": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "NewEtiqueta": {
-        "required": [
-          "nombre"
-        ],
-        "properties": {
-          "nombre": {
-            "type": "string"
-          },
-          "descripcion": {
-            "type": "string"
-          },
-          "lugares": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "created_by": {
-            "type": "string"
-          },
-          "updated_by": {
-            "type": "string"
-          }
-        }
-      }
-    }
-  },
   "tags": [
     {
-      "name": "Etiqueta"
+      "name": "Unclassified"
     }
   ]
 }
