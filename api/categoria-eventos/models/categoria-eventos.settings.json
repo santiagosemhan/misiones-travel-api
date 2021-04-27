@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "categoria_eventos",
   "info": {
-    "name": "CategoriaEventos"
+    "name": "Categoria Eventos",
+    "description": ""
   },
   "options": {
     "increments": true,

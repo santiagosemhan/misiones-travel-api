@@ -31,6 +31,18 @@
     "categoria_evento": {
       "model": "categoria-eventos",
       "via": "eventos"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "url": {
+      "type": "string"
     }
   }
 }

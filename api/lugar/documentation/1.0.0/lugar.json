@@ -1080,6 +1080,12 @@
                 "categoria_evento": {
                   "type": "string"
                 },
+                "imagen": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
