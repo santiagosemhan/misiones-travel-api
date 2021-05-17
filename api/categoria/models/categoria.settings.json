@@ -28,9 +28,6 @@
       "plugin": "upload",
       "required": false
     },
-    "categoria": {
-      "model": "categoria"
-    },
     "activo": {
       "type": "boolean",
       "default": true
@@ -50,6 +47,9 @@
       "repeatable": false,
       "component": "elements.geoposicion",
       "required": true
+    },
+    "sub_categorias": {
+      "collection": "categoria"
     },
     "location": {
       "type": "json",

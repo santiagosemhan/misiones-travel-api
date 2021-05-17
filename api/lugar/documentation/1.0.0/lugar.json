@@ -766,9 +766,6 @@
                 "imagen": {
                   "type": "string"
                 },
-                "categoria": {
-                  "type": "string"
-                },
                 "activo": {
                   "type": "boolean"
                 },
@@ -786,6 +783,12 @@
                 },
                 "geoposicion": {
                   "type": "component"
+                },
+                "sub_categorias": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "location": {
                   "type": "object"

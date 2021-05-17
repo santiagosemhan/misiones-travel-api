@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/27/2021 8:02:07 AM"
+    "x-generation-date": "05/16/2021 11:31:41 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6638,57 +6638,6 @@
               }
             }
           },
-          "categoria": {
-            "required": [
-              "id",
-              "nombre",
-              "geoposicion"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "descripcion": {
-                "type": "string"
-              },
-              "imagen": {
-                "type": "string"
-              },
-              "categoria": {
-                "type": "string"
-              },
-              "activo": {
-                "type": "boolean"
-              },
-              "lugares": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "slug": {
-                "type": "string"
-              },
-              "color": {
-                "type": "string"
-              },
-              "geoposicion": {
-                "type": "component"
-              },
-              "location": {
-                "type": "object"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "activo": {
             "type": "boolean",
             "default": true
@@ -6840,6 +6789,63 @@
               }
             }
           },
+          "sub_categorias": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nombre",
+                "geoposicion"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nombre": {
+                  "type": "string"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "imagen": {
+                  "type": "string"
+                },
+                "activo": {
+                  "type": "boolean"
+                },
+                "lugares": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "color": {
+                  "type": "string"
+                },
+                "geoposicion": {
+                  "type": "component"
+                },
+                "sub_categorias": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "location": {
+                  "type": "object"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "location": {
             "type": "object"
           }
@@ -6855,9 +6861,6 @@
             "type": "string"
           },
           "descripcion": {
-            "type": "string"
-          },
-          "categoria": {
             "type": "string"
           },
           "activo": {
@@ -6891,6 +6894,12 @@
               "longitud": {
                 "type": "number"
               }
+            }
+          },
+          "sub_categorias": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
           "location": {
@@ -8475,9 +8484,6 @@
                 "imagen": {
                   "type": "string"
                 },
-                "categoria": {
-                  "type": "string"
-                },
                 "activo": {
                   "type": "boolean"
                 },
@@ -8495,6 +8501,12 @@
                 },
                 "geoposicion": {
                   "type": "component"
+                },
+                "sub_categorias": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "location": {
                   "type": "object"
