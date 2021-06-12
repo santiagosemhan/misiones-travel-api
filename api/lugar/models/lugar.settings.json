@@ -59,8 +59,7 @@
     },
     "categorias": {
       "via": "lugares",
-      "collection": "categoria",
-      "dominant": true
+      "collection": "categoria"
     },
     "localidad": {
       "model": "localidad",
