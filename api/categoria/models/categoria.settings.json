@@ -34,8 +34,7 @@
     },
     "lugares": {
       "collection": "lugar",
-      "via": "categorias",
-      "dominant": true
+      "via": "categorias"
     },
     "slug": {
       "type": "string"
